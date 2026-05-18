@@ -1,0 +1,46 @@
+[project]
+name = "streamtex-design"
+version = "0.1.0"
+description = "Official StreamTeX design pack: components, design systems, kits, templates."
+readme = "README.md"
+authors = [{ name = "Nicolas Guelfi" }]
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "streamtex>=0.6.41",
+]
+
+[tool.uv.sources]
+streamtex = { path = "../streamtex", editable = true }
+
+[project.entry-points."streamtex.packs"]
+streamtex-design = "streamtex_design"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["streamtex_design*"]
+
+[tool.setuptools.package-data]
+streamtex_design = [
+    "_pack_manifest.toml",
+    "kits/*.toml",
+    "project_blueprints/*.md",
+    "cli_templates/**/*",
+    "samples/**/*",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["F403", "F405", "E701", "E741"]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]

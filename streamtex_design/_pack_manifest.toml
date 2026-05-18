@@ -1,0 +1,20 @@
+# streamtex-design — official StreamTeX design pack.
+# Schema: PLAN.md §5.4 + §4.6.
+
+[manifest]
+format = "0.1"
+
+[pack]
+name = "streamtex-design"
+version = "0.1.0"
+author = "Nicolas Guelfi"
+license = "MIT"
+streamtex_compat = ">=0.6.42,<1.0"
+
+[entrypoint]
+module = "streamtex_design"
+
+[scopes]
+core = "Universal components (primitives + compositions)"
+slides = "Slide-oriented templates"
+docs = "Documentation manual templates"
