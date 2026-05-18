@@ -185,8 +185,7 @@ Example workspace config (`streamtex-dev/stx.toml`):
 source = "./streamtex-patterns"
 
 [patterns.selection]
-mode = "preset"
-items = ["slides"]
+presets = ["slides"]
 ```
 
 Example project config (`projects/ai4se6d/stx.toml`) — composite selection:
