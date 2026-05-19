@@ -31,5 +31,16 @@ jobs:
       - name: Pytest
         run: uv run pytest tests/ -v
 
-      - name: stx validate
-        run: uv run stx validate
+      - name: stx validate (warnings tolerated, errors fail)
+        # PLAN §7.5: exit 0 = OK, 1 = warnings, 2 = errors.
+        # CI tolerates warnings (cosmetic / non-blocking) but fails on errors.
+        run: |
+          set +e
+          uv run stx validate
+          code=$?
+          set -e
+          if [ "$code" -ge 2 ]; then
+            echo "stx validate exited with $code (errors) — failing CI"
+            exit "$code"
+          fi
+          echo "stx validate exited with $code (OK or warnings) — CI tolerates"
