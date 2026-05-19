@@ -55,10 +55,10 @@ underline rule or subtitle.
 ## Extended layouts (tooltip + 95/5 grid)
 
 The simple `slide_heading(title=..., subtitle=...)` covers the canonical
-case. If a slide needs a **section-recap tooltip on hover** (legacy
-behaviour of the A2 `ptn_slide_heading`), compose it inline instead of
-using this component — `streamtex_design` does not bundle the
-`st_hover_tooltip` widget for separation of concerns. Pattern:
+case. If a slide needs a **section-recap tooltip on hover**, compose it
+inline instead of using this component — `streamtex_design` does not
+bundle the `st_hover_tooltip` widget for separation of concerns.
+Pattern:
 
 ```python
 from streamtex import st_block, st_grid, st_write, st_zoom

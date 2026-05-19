@@ -2,12 +2,7 @@
 
 Official StreamTeX **design pack**: components, design systems, kits, and
 CLI templates, distributed as a standard Python package per the reuse
-architecture spec
-(`streamtex/documentation/maintenance/reuse-architecture/PLAN.md`).
-
-> The previous A2-markdown catalogue (`streamtex-patterns`) has been
-> fully migrated to typed Python modules. See `CHANGELOG.md` for the
-> Wave 1 → 0.2.x history.
+architecture spec.
 
 ---
 
