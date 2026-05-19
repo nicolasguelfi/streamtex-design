@@ -1,13 +1,13 @@
 [project]
 name = "streamtex-design"
-version = "0.1.0"
+version = "0.2.1"
 description = "Official StreamTeX design pack: components, design systems, kits, templates."
 readme = "README.md"
 authors = [{ name = "Nicolas Guelfi" }]
 license = { text = "MIT" }
 requires-python = ">=3.11"
 dependencies = [
-    "streamtex>=0.6.41",
+    "streamtex>=0.7.0",
 ]
 
 [tool.uv.sources]
@@ -43,4 +43,5 @@ ignore = ["F403", "F405", "E701", "E741"]
 dev = [
     "pytest>=8.0",
     "ruff>=0.5",
+    "streamtex[cli]>=0.7.0",
 ]

@@ -5,10 +5,9 @@ CLI templates, distributed as a standard Python package per the reuse
 architecture spec
 (`streamtex/documentation/maintenance/reuse-architecture/PLAN.md`).
 
-> Previously named `streamtex-patterns`. Renamed 2026-05-19 in Wave 1 of
-> the reuse architecture refonte. The old A2-markdown catalogue is kept
-> under `core/`, `slides/`, `docs/` for historical reference and is fed
-> into the new Python components.
+> The previous A2-markdown catalogue (`streamtex-patterns`) has been
+> fully migrated to typed Python modules. See `CHANGELOG.md` for the
+> Wave 1 → 0.2.x history.
 
 ---
 
@@ -16,7 +15,7 @@ architecture spec
 
 ```bash
 # Inside any StreamTeX project
-stx pack add git:github.com/nicolasguelfi/streamtex-design@v0.1.0
+stx pack add git:github.com/nicolasguelfi/streamtex-design@v0.2.1
 stx kit install streamtex-design:course-default
 ```
 
@@ -29,8 +28,8 @@ components.
 | Layer | Count | Notes |
 |---|---|---|
 | Design systems | 3 | `default`, `modern_dark`, `modern_light` |
-| Components | 18 | mix of primitive / composition / block (PLAN §9.2) |
-| Kits | 4 | course-default, manual-default, project-default, slides-modern-dark |
+| Components | 19 | mix of primitive / composition / block (PLAN §9.2) |
+| Kits | 6 | core, course-default, manual-default, minimal, project-default, slides-modern-dark |
 | Entry point | 1 | `streamtex.packs:streamtex-design` |
 
 Every component validates against the contracts in
@@ -66,4 +65,4 @@ Use `streamtex-design` as a working reference, or follow the workflow in
 
 ## License
 
-MIT — see `LICENSE` (TODO before v0.1.0 release).
+MIT — see [`LICENSE`](LICENSE).

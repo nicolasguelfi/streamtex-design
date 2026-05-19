@@ -1,4 +1,4 @@
-"""Default design system — derived from the legacy styles_consolidated palette.
+"""Default design system — neutral palette suitable for documentation and slides.
 
 Bundles exposed: colors, titles, callouts, body, stat_hero, card_grid,
 takeaways, citation, inline_emphasis.

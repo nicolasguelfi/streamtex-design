@@ -6,10 +6,10 @@ format = "0.1"
 
 [pack]
 name = "streamtex-design"
-version = "0.1.0"
+version = "0.2.1"
 author = "Nicolas Guelfi"
 license = "MIT"
-streamtex_compat = ">=0.6.42,<1.0"
+streamtex_compat = ">=0.7.0,<1.0"
 
 [entrypoint]
 module = "streamtex_design"
