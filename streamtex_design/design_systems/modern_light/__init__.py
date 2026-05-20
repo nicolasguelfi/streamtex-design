@@ -1,4 +1,9 @@
-"""Modern light design system — calm tones on a paper-bright surface."""
+"""Modern light design system — calm tones on a paper-bright surface.
+
+Inherits non-callout bundles from the default DS. All font sizes use
+``var(--stx-scale-K, fallback)`` to integrate with the indexed responsive
+scale.
+"""
 
 from streamtex.styles import Style
 
@@ -40,9 +45,9 @@ class _Callouts:
         "background-color: rgba(46,125,50,0.10); border-left: 4px solid #2e7d32; padding: 14px 18px;",
         "ml_callout_success",
     )
-    icon = Style("font-size: 20px; font-weight: 700; color: #1f4e79;", "ml_callout_icon")
-    title = Style("font-weight: 700; font-size: 24px;", "ml_callout_title")
-    body = Style("font-size: 18px; line-height: 1.5;", "ml_callout_body")
+    icon = Style("font-size: var(--stx-scale-8, 20pt); font-weight: 700; color: #1f4e79;", "ml_callout_icon")
+    title = Style("font-weight: 700; font-size: var(--stx-scale-10, 24pt);", "ml_callout_title")
+    body = Style("font-size: var(--stx-scale-7, 18pt); line-height: 1.5;", "ml_callout_body")
 
 
 class DesignSystem:
