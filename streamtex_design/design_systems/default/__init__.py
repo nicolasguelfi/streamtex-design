@@ -93,9 +93,21 @@ class _InlineEmphasis:
 
 
 class _ComparisonTable:
-    header = Style("font-weight: 700; padding: 8px 12px; background: rgba(255,255,255,0.05);", "ct_header")
-    row = Style("padding: 8px 12px; border-bottom: 1px solid rgba(255,255,255,0.05);", "ct_row")
-    accent_row = Style("padding: 8px 12px; background: rgba(46,196,182,0.08);", "ct_accent")
+    header = Style(
+        "font-weight: 700; font-size: var(--stx-scale-7, 18pt); padding: 8px 12px;"
+        " background: rgba(255,255,255,0.05);",
+        "ct_header",
+    )
+    row = Style(
+        "font-size: var(--stx-scale-7, 18pt); padding: 8px 12px;"
+        " border-bottom: 1px solid rgba(255,255,255,0.05);",
+        "ct_row",
+    )
+    accent_row = Style(
+        "font-size: var(--stx-scale-7, 18pt); padding: 8px 12px;"
+        " background: rgba(46,196,182,0.08);",
+        "ct_accent",
+    )
 
 
 class DesignSystem:
