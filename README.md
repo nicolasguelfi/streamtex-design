@@ -1,63 +1,34 @@
-# streamtex-design
+# ⚠️ Archived — moved to nicolasguelfi/streamtex-packs
 
-Official StreamTeX **design pack**: components, design systems, kits, and
-CLI templates, distributed as a standard Python package per the reuse
-architecture spec.
+This repository has been **archived** as of 2026-05-20.
 
----
+The pack now lives in the [`nicolasguelfi/streamtex-packs`](https://github.com/nicolasguelfi/streamtex-packs)
+monorepo at the subdirectory [`streamtex-pack-design/`](https://github.com/nicolasguelfi/streamtex-packs/tree/main/streamtex-pack-design).
 
-## Quick start
+## Migration
 
-```bash
-# Inside any StreamTeX project
-stx pack add git:github.com/nicolasguelfi/streamtex-design@v0.2.1
-stx kit install streamtex-design:course-default
+Update your `pyproject.toml`:
+
+```diff
+- "streamtex-design @ git+https://github.com/nicolasguelfi/streamtex-design.git@v0.2.3"
++ "streamtex-pack-design @ git+https://github.com/nicolasguelfi/streamtex-packs.git@pack-design-v0.2.4#subdirectory=streamtex-pack-design"
 ```
 
-This declares the pack in `stx.toml`, installs the Python package, sets the
-active design system (`default`), and exposes the kit's selected
-components.
+The Python module name `streamtex_design` is **unchanged** — `from streamtex_design.components import ...` imports work as before.
 
-## What's inside
+For local development with editable installs:
 
-| Layer | Count | Notes |
-|---|---|---|
-| Design systems | 3 | `default`, `modern_dark`, `modern_light` |
-| Components | 19 | mix of primitive / composition / block (PLAN §9.2) |
-| Kits | 6 | core, course-default, manual-default, minimal, project-default, slides-modern-dark |
-| Entry point | 1 | `streamtex.packs:streamtex-design` |
-
-Every component validates against the contracts in
-`streamtex.core.validation.validate_component` (CV001–CV011). Every
-design system validates against `validate_design_system` (DV001–DV006).
-Every kit validates against `validate_kit` (KV001–KV005). The pack
-manifest validates against `validate_pack` (PV001–PV010).
-
-## Using a component
-
-```python
-from streamtex_design.components.callout import callout
-from streamtex_design.design_systems.default import DesignSystem as DS
-
-callout(design_system=DS, title="Note", body="Watch the units.", variant="info")
+```toml
+[tool.uv.sources]
+streamtex-pack-design = { path = "../streamtex-packs/streamtex-pack-design", editable = true }
 ```
 
-Components consume the active design system via keyword argument so a
-project can swap systems by changing one import.
+## Migration history
 
-## Bundles consumed (`Design system bundles required`)
-
-Each component lists the design-system bundle attributes it depends on
-(format `<bundle>.<attr>`). The lib's runtime helper
-`streamtex.core.discovery.get_bundle_attr` enriches the error message when
-a bundle is missing — pointing the user at `stx validate`.
-
-## Authoring your own pack
-
-Use `streamtex-design` as a working reference, or follow the workflow in
-`stx_manual_reuse` (chapter "Pack authoring") and the dedicated
-`cookiecutter-streamtex-pack` template (forthcoming).
+The full migration is documented in
+[streamtex/documentation/maintenance/pack_monorepo/PLAN.md](https://github.com/nicolasguelfi/streamtex/blob/main/documentation/maintenance/pack_monorepo/PLAN.md).
 
 ## License
 
-MIT — see [`LICENSE`](LICENSE).
+This repo (at its archived state) is MIT-licensed. The new home in
+`streamtex-packs` is BUSL-1.1 (aligned with the streamtex library).
