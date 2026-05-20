@@ -21,7 +21,7 @@ class _Titles:
     section = Style("font-size: 28px; font-weight: 700;", "title_section")
     subtitle = Style("font-size: 22px; font-weight: 600;", "title_subtitle")
     body = Style("font-size: 18px;", "title_body")
-    caption = Style("font-size: 14px; color: #95A5A6;", "title_caption")
+    caption = Style("font-size: 18px; color: #95A5A6;", "title_caption")
 
 
 class _Callouts:
@@ -42,12 +42,12 @@ class _Callouts:
         "callout_success",
     )
     icon = Style("font-size: 20px; font-weight: 700;", "callout_icon")
-    title = Style("font-weight: 700; font-size: 17px;", "callout_title")
-    body = Style("font-size: 15px; line-height: 1.5;", "callout_body")
+    title = Style("font-weight: 700; font-size: 24px;", "callout_title")
+    body = Style("font-size: 18px; line-height: 1.5;", "callout_body")
 
 
 class _Body:
-    paragraph = Style("font-size: 16px; line-height: 1.6;", "body_p")
+    paragraph = Style("font-size: 20px; line-height: 1.6;", "body_p")
     emphasis = Style("font-weight: 700; color: #7AB8F5;", "body_em")
     code = Style("font-family: monospace; background: rgba(255,255,255,0.05); padding: 1px 6px;", "body_code")
 
@@ -63,18 +63,18 @@ class _CardGrid:
         " padding: 16px; border-radius: 8px;",
         "card",
     )
-    card_title = Style("font-size: 17px; font-weight: 700;", "card_title")
-    card_body = Style("font-size: 14px; line-height: 1.5;", "card_body")
+    card_title = Style("font-size: 18px; font-weight: 700;", "card_title")
+    card_body = Style("font-size: 18px; line-height: 1.5;", "card_body")
 
 
 class _Takeaways:
-    item = Style("font-size: 16px; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05);", "ta_item")
+    item = Style("font-size: 18px; padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.05);", "ta_item")
     lead = Style("font-size: 18px; font-weight: 700;", "ta_lead")
 
 
 class _Citation:
-    source = Style("font-size: 13px; color: #95A5A6; font-style: italic;", "cite_source")
-    author = Style("font-size: 13px; color: #95A5A6;", "cite_author")
+    source = Style("font-size: 18px; color: #95A5A6; font-style: italic;", "cite_source")
+    author = Style("font-size: 18px; color: #95A5A6;", "cite_author")
 
 
 class _InlineEmphasis:

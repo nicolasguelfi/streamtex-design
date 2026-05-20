@@ -41,8 +41,8 @@ class _Callouts:
         "md_callout_success",
     )
     icon = Style("font-size: 22px; font-weight: 700; color: #a78bfa;", "md_callout_icon")
-    title = Style("font-weight: 700; font-size: 18px;", "md_callout_title")
-    body = Style("font-size: 16px; line-height: 1.55;", "md_callout_body")
+    title = Style("font-weight: 700; font-size: 24px;", "md_callout_title")
+    body = Style("font-size: 18px; line-height: 1.55;", "md_callout_body")
 
 
 class DesignSystem:
