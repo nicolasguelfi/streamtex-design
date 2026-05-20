@@ -5,6 +5,21 @@ All notable changes to streamtex-design are documented in this file.
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/);
 versions follow semver pinned to the reuse architecture milestones.
 
+## [0.2.3] — 2026-05-20 — Track streamtex 0.7.6 relative scale
+
+### Changed
+
+- Requires `streamtex >= 0.7.6`.
+- The `var(--stx-scale-K, fallback_pt)` references in all 3 design
+  systems remain unchanged: streamtex 0.7.6's WORD_PROCESSOR curve
+  desktop values are identical to 0.7.5 (round-trip exact), so
+  fallback pt values stay valid. The CSS variable runtime values
+  now derive from `base_pt_desktop × ratios` instead of absolute pt
+  tables, but consumers see the same desktop pt values.
+- Per-document `st_book(scale=ScaleConfig(base_pt_desktop=X))` now
+  rescales every DS bundle automatically — design systems require no
+  per-base configuration.
+
 ## [0.2.2] — 2026-05-20 — Indexed responsive scale integration
 
 ### Changed
