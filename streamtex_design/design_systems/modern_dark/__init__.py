@@ -1,4 +1,9 @@
-"""Modern dark design system — vibrant accents on a deeply-dark surface."""
+"""Modern dark design system — vibrant accents on a deeply-dark surface.
+
+Inherits non-callout bundles from the default DS. All font sizes use
+``var(--stx-scale-K, fallback)`` to integrate with the indexed responsive
+scale.
+"""
 
 from streamtex.styles import Style
 
@@ -40,9 +45,9 @@ class _Callouts:
         "background-color: rgba(39,174,96,0.12); border-left: 4px solid #27AE60; padding: 14px 18px;",
         "md_callout_success",
     )
-    icon = Style("font-size: 22px; font-weight: 700; color: #a78bfa;", "md_callout_icon")
-    title = Style("font-weight: 700; font-size: 24px;", "md_callout_title")
-    body = Style("font-size: 18px; line-height: 1.55;", "md_callout_body")
+    icon = Style("font-size: var(--stx-scale-9, 22pt); font-weight: 700; color: #a78bfa;", "md_callout_icon")
+    title = Style("font-weight: 700; font-size: var(--stx-scale-10, 24pt);", "md_callout_title")
+    body = Style("font-size: var(--stx-scale-7, 18pt); line-height: 1.55;", "md_callout_body")
 
 
 class DesignSystem:

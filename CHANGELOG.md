@@ -5,6 +5,24 @@ All notable changes to streamtex-design are documented in this file.
 The format is loosely based on [Keep a Changelog](https://keepachangelog.com/);
 versions follow semver pinned to the reuse architecture milestones.
 
+## [0.2.2] — 2026-05-20 — Indexed responsive scale integration
+
+### Changed
+
+- All three design systems (default, modern_dark, modern_light) now
+  consume the indexed responsive font scale via
+  `var(--stx-scale-K, fallback_pt)` instead of hardcoded `px` values.
+  Components rendered by streamtex-design now respect the parent
+  document's `st_book(scale=...)` config and react automatically to
+  the 1024px / 480px responsive breakpoints.
+- Requires `streamtex >= 0.7.5`.
+
+### Added
+
+- `tests/test_design_systems.py::test_no_hardcoded_px_in_design_systems`
+  — guard that fails CI if any design-system bundle declares a
+  hardcoded `Npx` font-size.
+
 ## [0.2.1] — 2026-05-19 (Legacy reference module removed)
 
 ### Removed
